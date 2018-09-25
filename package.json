@@ -1,7 +1,7 @@
 {
   "name": "reactjs-basics",
   "version": "1.0.0",
-  "description": "Some basic ReactJS",
+  "description": "Foodie",
   "main": "app.js",
   "scripts": {
     "start": "npm run build",
@@ -17,7 +17,8 @@
     "@material-ui/core": "^3.1.0",
     "@material-ui/icons": "^3.0.1",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -31,7 +32,12 @@
     "babel-loader": "^8.0.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "css-loader": "^1.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "live-server": "^1.2.0",
     "loader": "^2.1.1",

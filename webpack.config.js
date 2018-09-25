@@ -1,38 +1,46 @@
-const path = require("path");
-
-const PUBLIC_DIR = path.resolve(__dirname, "public");
-const SRC_DIR = path.resolve(__dirname, "src");
+const path = require('path');
 
 const config = {
-    entry: SRC_DIR + "/app.js",
-    output: {
-        path: PUBLIC_DIR ,
-        filename: "bundle.js",
-    },
-    devtool:"cheap-module-source-map",
-    module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+  entry: `${path.resolve(__dirname, 'src')}/app.js`,
+  output: {
+    path: path.resolve(__dirname, './public'),
+    filename: 'bundle.js',
+  },
+  devtool: 'cheap-module-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
             },
-            {
-                test: /\.js?/,
-                include: SRC_DIR,
-                loader: "babel-loader",
+          },
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
+        use: [
+          { loader: 'babel-loader' },
+          {
+            loader: 'eslint-loader',
+            options: {
+              fix: true,
             },
-            {
-                test:/\.(png|jpg|jpeg|gif)$/,
-                use:[
-                    {
-                        loader: 'file-loader',
-                        options: {}
-                    }   
-                ]
-            }
-        ]
-    },
-    mode: "development"
+          },
+        ],
+      },
+    ],
+  },
+  mode: 'development',
 };
 
 module.exports = config;

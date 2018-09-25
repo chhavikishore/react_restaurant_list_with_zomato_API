@@ -10,7 +10,7 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Switch>
-        <Route path="/" component={App} exact={true} />
+        <Route exact path="/" component={App} />
         <Route path="/collection_details" component={CategoryCollection} />
         <Route path="/restaurant_detail/:id" component={RestaurantDetail} />
         <Route path="/add_to_category/:name" component={RestaurantCategory} />
