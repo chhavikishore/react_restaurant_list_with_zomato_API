@@ -1,6 +1,6 @@
 .nav{  // for changing style of navbar
     color:brown !important;
-    background-color: orange !important;
+    background-color: wheat !important;
 
     .nav_ul{
         li{
@@ -8,4 +8,10 @@
         } 
         list-style-type: none;
     }
+}
+
+.viewButton{
+    color: brown !important;
+    background: orange !important;
+    float: right !important;
 }

@@ -18,7 +18,7 @@ class CategoryCollection extends React.Component {
     for (let i = 0; i < localStorage.length; i += 1) {
       const v = i;
       listcat.push(
-        <Button key={v} onClick={() => this.showCollection(localStorage.key(v))}>
+        <Button className="button_color" key={v} onClick={() => this.showCollection(localStorage.key(v))}>
           {localStorage.key(v)}
         </Button>,
       );

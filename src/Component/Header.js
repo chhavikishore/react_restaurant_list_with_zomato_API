@@ -10,11 +10,11 @@ const Navbar = () => (
   <Navigation className="nav">
     <ul className="nav_ul">
       <li>
-        <Button>Foodie</Button>
+        <Button className="button_color">Foodie</Button>
       </li>
       <li>
         <Link className="restaurant_link" to="/collection_details">
-          <Button>List Category Details</Button>
+          <Button className="viewButton">List Category Details</Button>
         </Link>
       </li>
     </ul>
