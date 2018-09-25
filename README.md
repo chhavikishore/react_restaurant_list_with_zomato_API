@@ -1,0 +1,1 @@
+![Flowchart](https://github.com/chhavikishore/react_restaurant_list_with_zomato_API/blob/master/public/src/styles/image/flowchart.jpg)
