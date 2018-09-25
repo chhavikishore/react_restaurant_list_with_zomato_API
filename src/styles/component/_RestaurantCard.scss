@@ -1,0 +1,39 @@
+.flex{ //card main div 
+    display: flex;
+    flex-wrap: wrap;
+    // margin : 2%;
+    justify-content:center;
+}
+.card{ //card styling
+    padding:0.5em 1em;
+    margin:2%;
+    width:300px !important;
+    border: 1px groove brown;
+}
+
+.card_image{ //card image styling
+    object-fit: cover;
+    height: 200px;
+    width:100%;
+}
+
+.card_content{
+    height: 120px;
+}
+
+.restaurant_link{
+    text-decoration: none !important;
+}
+
+.category_button{
+    text-align: center;
+    color:brown !important;
+    background: orange !important;
+    margin-left:1em !important;
+}
+
+.details_button{
+    text-align: center;
+    color:brown !important;
+    background: orange !important;
+}

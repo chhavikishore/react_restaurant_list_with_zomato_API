@@ -1,0 +1,11 @@
+.nav{  // for changing style of navbar
+    color:brown !important;
+    background-color: orange !important;
+
+    .nav_ul{
+        li{
+            display: inline;
+        } 
+        list-style-type: none;
+    }
+}

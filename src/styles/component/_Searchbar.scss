@@ -1,0 +1,24 @@
+.search{
+    text-align: center !important;
+    vertical-align: middle !important;
+    background-attachment: fixed;
+    background: url('background_image.jpg') no-repeat; 
+    height: 620px !important;
+    width: 100% !important;
+    padding:0% !important;
+    margin:0% !important;
+}
+
+.search_text_div{
+    background: rgba(255, 255, 255, 0.4);
+    width: 28% !important;
+    top: 50% !important;
+    left: 35% !important;
+    position: absolute;
+    padding: 0.5em;
+
+    Button{
+        background: white !important;
+    }
+}
+
