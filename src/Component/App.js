@@ -1,5 +1,5 @@
+/* eslint react/jsx-filename-extension:0 */
 import React, { Fragment } from "react";
-import { render } from "react-dom";
 
 //importing component using .js extension file in app.js
 import Navigation from "../Component/Header";
@@ -38,33 +38,6 @@ class App extends React.Component {
             .then(restaurant => this.setState(() => ({ restaurant })));
         }  
     }
-    
-    // componentDidMount(){
-    //     fetch(url, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'user-key': 'bf689b8eacf7d141ef93a157dd3148fc',
-    //         }
-    //     })
-    //     .then(
-    //         function(response) {
-    //             if (response.status !== 200) {
-    //                 console.log('Looks like there was a problem. Status Code: ' +
-    //                     response.status);
-    //                 return;
-    //             }
-
-    //             // Examine the text in the response
-    //             response.json().then(function (data) {
-    //                 console.log(data);
-    //             });
-    //         }
-    //     )
-    //     .catch(function(err) {
-    //             console.log('Fetch Error :-S', err);
-    //         });
-    // }
     
     render() {
         return (

@@ -1,3 +1,4 @@
+/* eslint react/jsx-filename-extension:0 */
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from '../Component/App';

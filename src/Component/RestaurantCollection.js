@@ -1,3 +1,4 @@
+/* eslint react/jsx-filename-extension:0 */
 import React from 'react';
 import CardData from './RestaurantCard';
 

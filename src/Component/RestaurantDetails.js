@@ -1,3 +1,4 @@
+/* eslint react/jsx-filename-extension:0 */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '@material-ui/core/Card';

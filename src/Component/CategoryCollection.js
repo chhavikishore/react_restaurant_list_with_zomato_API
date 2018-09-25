@@ -1,3 +1,4 @@
+/* eslint react/jsx-filename-extension:0 */
 import React from 'react';
 import { Button } from '@material-ui/core';
 
