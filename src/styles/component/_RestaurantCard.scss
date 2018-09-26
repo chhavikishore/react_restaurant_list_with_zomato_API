@@ -11,6 +11,10 @@
     border: 1px groove brown;
 }
 
+.card_header{
+    height: 75px;
+}
+
 .card_image{ //card image styling
     object-fit: cover;
     height: 200px;
@@ -18,7 +22,7 @@
 }
 
 .card_content{
-    height: 120px;
+    height: 175px;
 }
 
 .restaurant_link{
@@ -36,4 +40,30 @@
     text-align: center;
     color:brown !important;
     background: orange !important;
+}
+
+.avatar{
+    background: orange !important;
+    color :brown !important;
+}
+
+.resDetailsCard{
+    width: 400px !important;
+    margin :auto !important;
+    padding: auto !important;
+    justify-content: center !important;
+}
+
+.detail_card_content{
+    padding: 2em 0em 2em 6em !important;
+}
+
+.existing_button{
+    background: brown;
+    color:orange;
+    font-size: bold;
+}
+
+.res_details_card{
+    margin-top:6em !important;
 }

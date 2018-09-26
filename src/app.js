@@ -1,3 +1,4 @@
+/* eslint react/jsx-filename-extension:0 */
 /* global document: true */
 /* eslint no-undef: "error" */
 

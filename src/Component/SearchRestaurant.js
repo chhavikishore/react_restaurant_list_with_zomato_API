@@ -1,13 +1,14 @@
 /* eslint react/jsx-filename-extension:0 */
+/* eslint react/prop-types:0 */
 import React from 'react';
 
 // importing component of material ui
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-import { Input } from '../../node_modules/@material-ui/core';
+import { Input } from '@material-ui/core';
 
 
-class SearchBar extends React.Component {
+class SearchRestaurant extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,20 +22,19 @@ class SearchBar extends React.Component {
   }
 
   render() {
+    const { handleSearchRestaurant } = this.props;
+    const { searchTerm } = this.state;
     return (
       <div>
         <Paper elevation={1} className="search">
           <div className="search_text_div">
             <Input
-              placeholder="Search…"
+              placeholder="Search Restaurant…"
               disableUnderline
               onChange={this.changeInput}
             />
             <Button
-              onClick={() => {
-                const newLocal = this.props.handleSearch;
-                newLocal(this.state.searchTerm);
-              }}
+              onClick={() => { handleSearchRestaurant(searchTerm); }}
             >
 Search
 
@@ -46,4 +46,4 @@ Search
   }
 }
 
-export default SearchBar;
+export default SearchRestaurant;

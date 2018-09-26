@@ -1,27 +1,29 @@
 /* eslint react/jsx-filename-extension:0 */
-/* global localStorage:true */
+/* eslint react/prop-types:0 */
 import React from 'react';
 import { Button } from '@material-ui/core';
 
-let listcat = []; // to store list of categories
-let lists = [];
+let existingCategories = []; // to store list of categories
+let restaurantNames = [];
 class CategoryCollection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      category_list: [],
+      categoryList: [],
     };
   }
 
   componentDidMount() {
-    listcat = [];
+    existingCategories = [];
     for (let i = 0; i < localStorage.length; i += 1) {
-      const v = i;
-      listcat.push(
-        <Button className="button_color" key={v} onClick={() => this.showCollection(localStorage.key(v))}>
-          {localStorage.key(v)}
-        </Button>,
-      );
+      if (localStorage.key(i) !== 'loglevel:webpack-dev-server') {
+        const v = i;
+        existingCategories.push(
+          <Button className="button_color" key={v} onClick={() => this.showCollection(localStorage.key(v))}>
+            {localStorage.key(v)}
+          </Button>,
+        );
+      }
     }
     this.setState({ // to re-render the component
 
@@ -29,14 +31,16 @@ class CategoryCollection extends React.Component {
   }
 
   showCollection(keyValue) {
-    lists = [];
-    this.state.category_list = [];
-    this.state.category_list.push(localStorage.getItem(keyValue).split(','));
-    for (let i = 0; i < this.state.category_list[0].length; i += 1) {
+    restaurantNames = [];
+    const { categoryList } = this.state;
+    let category = categoryList;
+    category = [];
+    category.push(localStorage.getItem(keyValue).split(','));
+    for (let i = 0; i < category[0].length; i += 1) {
       if (localStorage.key(i) !== 'loglevel:webpack-dev-server') {
         const v = i;
-        lists.push(
-          <div key={v}>{this.state.category_list[0][v]}</div>,
+        restaurantNames.push(
+          <div key={v}>{category[0][v]}</div>,
         );
       }
     }
@@ -48,9 +52,9 @@ class CategoryCollection extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>{listcat.map(data => data)}</div>
-        <div>{lists.map(data => data)}</div>
+      <div className="res_details_card">
+        <div>{existingCategories.map(data => data)}</div>
+        <div>{restaurantNames.map(data => data)}</div>
       </div>
     );
   }

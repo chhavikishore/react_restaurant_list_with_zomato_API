@@ -1,10 +1,8 @@
 /* eslint react/jsx-filename-extension:0 */
-/* global fetch:true */
 import React from 'react';
 
 //  importing component using .js extension file in app.js
-import Navigation from './Header';
-import SearchBar from './Searchbar';
+import SearchRestaurant from './SearchRestaurant';
 import RestaurantCollection from './RestaurantCollection';
 
 //  importing scss files
@@ -20,10 +18,10 @@ class App extends React.Component {
     this.state = {
       restaurant: [],
     };
-    this.handleSearch = this.handleSearch.bind(this);
+    this.handleSearchRestaurant = this.handleSearchRestaurant.bind(this);
   }
 
-  handleSearch(restaurantName) { // to be called on serach button click
+  handleSearchRestaurant(restaurantName) { // to be called on serach button click
     if (restaurantName !== undefined && restaurantName !== null && restaurantName !== '') {
       const url = `https://developers.zomato.com/api/v2.1/search?q=${restaurantName}`;
       fetch(url, {
@@ -39,11 +37,11 @@ class App extends React.Component {
   }
 
   render() {
+    const { restaurant } = this.state;
     return (
       <div>
-        <Navigation />
-        <SearchBar handleSearch={this.handleSearch} />
-        <RestaurantCollection restaurant={this.state.restaurant} />
+        <SearchRestaurant handleSearchRestaurant={this.handleSearchRestaurant} />
+        <RestaurantCollection restaurant={restaurant} />
       </div>
     );
   }
