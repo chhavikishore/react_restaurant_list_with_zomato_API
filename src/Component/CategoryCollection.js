@@ -37,12 +37,10 @@ class CategoryCollection extends React.Component {
     category = [];
     category.push(localStorage.getItem(keyValue).split(','));
     for (let i = 0; i < category[0].length; i += 1) {
-      if (localStorage.key(i) !== 'loglevel:webpack-dev-server') {
-        const v = i;
-        restaurantNames.push(
-          <div key={v}>{category[0][v]}</div>,
-        );
-      }
+      const v = i;
+      restaurantNames.push(
+        <div key={v}>{category[0][v]}</div>,
+      );
     }
 
     this.setState({ // to re-render the component

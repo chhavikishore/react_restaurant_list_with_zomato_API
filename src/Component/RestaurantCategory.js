@@ -57,13 +57,16 @@ class addToCategory extends React.Component {
   }
 
   addRestaurantToExistingCat(categoryName) { // to add restaurant to existing category
-    const restaurantList = [];
+    let restaurantList;
+    restaurantList = localStorage.getItem(categoryName);
+    const restaurantListArray = restaurantList.split(',');
     const { match } = this.props;
     const resName = match.params.name; // restaurant name from route
-    restaurantList.push(localStorage.getItem(categoryName));
-    restaurantList.push(resName);
-    localStorage.setItem(categoryName, restaurantList);
-    // alert(`${resName} successfully added to ${categoryName}.`);
+    if (restaurantListArray.indexOf(resName) === -1) {
+      restaurantList += ',';
+      restaurantList = restaurantListArray + resName;
+      localStorage.setItem(categoryName, restaurantList);
+    }
   }
 
   existingCategory() {

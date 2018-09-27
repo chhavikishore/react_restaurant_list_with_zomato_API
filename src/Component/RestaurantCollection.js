@@ -6,10 +6,10 @@ import CardData from './RestaurantCard';
 const RestaurantCollection = (props) => {
   const { restaurant } = props;
   if (restaurant.restaurants) {
-    const resDetail = restaurant.restaurants;
+    const restaurantDetail = restaurant.restaurants;
     return (
       <div className="flex">
-        {resDetail.map(item => (<CardData key={item.restaurant.id} card={item} />))}
+        {restaurantDetail.map(item => (<CardData key={item.restaurant.id} card={item} />))}
       </div>
     );
   } return <div />;
