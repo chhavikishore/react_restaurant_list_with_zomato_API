@@ -16,7 +16,6 @@ const AppRouter = () => (
         <Route path="/collection-details" component={CategoryCollection} />
         <Route path="/restaurant-detail/:id" component={RestaurantDetail} />
         <Route path="/add-to-category/:name" component={RestaurantCategory} />
-        <Route exact path="/home" component={App} />
       </Switch>
     </div>
   </BrowserRouter>

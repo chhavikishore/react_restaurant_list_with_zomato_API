@@ -10,11 +10,25 @@
     }
 }
 
-.viewButton{
-    color: brown !important;
-    background: orange !important;
-    float: right !important;
-    margin-left:8px !important;
+.drawerList{
+    width:200px !important;
+    font-size: 18px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    color:brown !important;
+    ul{
+        div{
+            padding:1rem !important;
+        }
+        a{
+            text-decoration: none !important;
+            padding: 2rem 0rem;
+            color: inherit;
+        }
+        span{
+            vertical-align: super;
+        }
+    }
+
 }
 
 .logo{
@@ -26,4 +40,9 @@
 
 .home_link{
     text-decoration: none !important;
+}
+
+.menu{
+    font-size:25px !important;
+    padding: 1em;
 }
