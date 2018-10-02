@@ -21,7 +21,7 @@ import '../styles/base.scss';
 import '../styles/styles.scss';
 
 
-const apiKey = 'bf689b8eacf7d141ef93a157dd3148fc';
+const apiKey = ''; //put your API Key
 
 class App extends React.Component {
   constructor(props) {
